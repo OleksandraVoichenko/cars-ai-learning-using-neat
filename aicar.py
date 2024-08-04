@@ -29,14 +29,14 @@ class Car:
         self.speed = 0
         self.set_speed = False
 
-        self.car_center = [self.position[0] + (CAR_X // 2), self.position[1] + (CAR_Y // 2)]
+        self.car_center = [self.position[0] + (CAR_X // 2), self.position[1] + (CAR_Y // 2)] # set car center
 
-        self.radars = []
+        self.radars = [] # array for radars of the car
         self.radars_to_draw = []
 
         self.alive = True
 
-        self.distance = 0
+        self.distance = 0 # distance ridden
         self.time = 0
 
     def draw(self, screen):
@@ -137,6 +137,7 @@ class Car:
 
 
 def run_ai(genomes, config_file):
+    """Runs AI simulation and NEAT algorithm"""
     pygame.init()
     ride_map = pygame.image.load('map2.png').convert()
     clock = pygame.time.Clock()
